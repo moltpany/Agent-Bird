@@ -18,6 +18,10 @@
 - **Camera:** _(model)_
 - **Workflow:** _(photo → import → send to agent)_
 
+### Bird Diary
+- **bird_diary_path:** _(local path to cloned bird-diary repo, e.g. ~/projects/bird-diary)_
+- **Publish preference:** _(ask each time / always / never)_
+
 ### Interests
 - _(specific groups: raptors, passerines, waterfowl, etc.)_
 

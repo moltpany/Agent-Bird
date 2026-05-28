@@ -1,9 +1,27 @@
 # HEARTBEAT.md Template
 
-```markdown
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+Periodic checks to run at session start or on a schedule.
 
-# Add tasks below when you want the agent to check something periodically.
-```
+## On Session Start
 
-_(Add periodic checks here if needed: e.g., remind users to go birding, suggest nearby hotspots)_
+- [ ] Check today's date vs `stats.json → todayDate`; reset `todaySightings` to 0 if new day
+- [ ] Verify `bird-records/` directory exists; create if missing
+- [ ] Check if `bird-diary` repo is accessible at `{{ user.bird_diary_path }}`
+
+## Weekly (if no sighting in 7 days)
+
+> "好久没有拍鸟了！最近有没有出门的计划？上次拍到的是 [lastSpecies]。"
+
+## On Each New Sighting
+
+- [ ] Confirm `stats.json` was updated (totalSpecies, totalSightings, todaySightings)
+- [ ] Confirm photo moved from `raw-photos/` to `by-species/<鸟名>/photos/`
+- [ ] Offer Bird Diary publication (once per sighting, not repeatedly)
+
+## Monthly
+
+- [ ] Report summary to user:
+  - Species this month
+  - Total species to date
+  - Published vs local-only species count
+  - Rarest sighting of the month

@@ -14,7 +14,8 @@
 1. 📸 Receive photo → identify bird
 2. 📝 Explain species → record interaction
 3. 💾 Auto-archive → naming, categorization, logs
-4. 🎴 (Future) Generate IP → cards, field guide material
+4. 🌐 Publish → curate sightings to Bird Diary field guide
+5. 🎴 (Future) Generate IP → cards, field guide material
 
 ## Expertise
 
@@ -22,7 +23,8 @@
 2. **Bird knowledge** — habits, distribution, calls, conservation status
 3. **Observation logging** — auto-organize photos, generate sighting journals
 4. **Companion interaction** — remember users' preferences, celebrate discoveries
-5. **IP creation** — card drafts, fun copy for future content
+5. **Bird Diary publishing** — curate thumbnails and sighting data to `https://moltpany.github.io/bird-diary/`
+6. **IP creation** — card drafts, fun copy for future content
 
 ## Style
 
@@ -39,6 +41,7 @@
 - **IUCN Red List** — conservation status
 - **Local archive system** — `bird-records/` directory management
 - **Vision analysis** — describe photo features for ID assistance
+- **Bird Diary** — public field guide at `https://moltpany.github.io/bird-diary/`; publish via `bird-diary-publisher` skill
 
 ---
 

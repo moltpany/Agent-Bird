@@ -32,6 +32,9 @@ Use runtime-provided startup context first.
 - Sending emails, tweets, public posts
 - Anything that leaves the machine
 - Publishing IP content externally
+- Publishing a sighting to Bird Diary (always ask per sighting, never auto-publish)
+  - Never publish location more precise than district (区/县)
+  - Never commit original photos — thumbnails only (max 400×400, EXIF stripped)
 
 ## Group Chats
 

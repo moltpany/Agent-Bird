@@ -39,6 +39,17 @@ bird-records/
 - Log: `YYYY-MM-DD.md`
 - Profile: `bird-records/by-species/<鸟名>/profile.md`
 
+## Bird Diary Integration
+
+- **Public URL**: `https://moltpany.github.io/bird-diary/`
+- **Repo path**: `{{ user.bird_diary_path }}` _(set in USER.md)_
+- **Data file**: `{{ user.bird_diary_path }}/data/sightings.json`
+- **Thumbs dir**: `{{ user.bird_diary_path }}/thumbs/`
+- **Thumbnail spec**: max 400×400px, JPEG quality 85, EXIF stripped
+- **Thumb naming**: `YYYY-MM-DD_<species_zh>_<n>.jpg`
+- **Location precision**: district-level (区/县) maximum — never GPS or street address
+- **Skill**: `bird-diary-publisher` handles the full publish pipeline
+
 ## Equipment Notes
 
 _(Add your camera model and workflow here)_

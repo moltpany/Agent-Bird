@@ -25,7 +25,7 @@ Append to `bird-records/sightings-log/YYYY-MM-DD.md`:
 ```markdown
 ## HH:MM - [中文名]
 **发现者**: @[user]  
-**设备**: 松下 ZS99  
+**设备**: {{ user.camera }}  
 **照片**: [raw-photos/YYYY-MM-DD_HH-MM-SS_鸟名.jpg]
 
 ### 识别结果
@@ -87,6 +87,15 @@ mv bird-records/raw-photos/YYYY-MM-DD_HH-MM-SS_鸟名.jpg \
    bird-records/by-species/鸟名/photos/
 ```
 
+### 6. Offer Bird Diary Publication
+After archiving, ask the user once:
+
+> "要把这张发布到 Bird Diary 图鉴吗？会生成缩略图，不上传原图。"
+
+- If **yes**: invoke the `bird-diary-publisher` skill.
+- If **no**: skip silently, archive stays local only.
+- Never publish without explicit confirmation.
+
 ## Stats Tracking
 
 Maintain a running count in `bird-records/stats.json`:
@@ -98,9 +107,13 @@ Maintain a running count in `bird-records/stats.json`:
   "todayDate": "YYYY-MM-DD",
   "rarest": { "species": "", "level": "" },
   "mostPhotographed": "",
-  "firstSightingDate": "YYYY-MM-DD"
+  "firstSightingDate": "YYYY-MM-DD",
+  "publishedSpecies": 0,
+  "lastPublished": ""
 }
 ```
+
+`publishedSpecies` = species count in bird-diary sightings.json. `lastPublished` = ISO date of most recent bird-diary commit.
 
 ## IP Card Draft Template
 
@@ -132,7 +145,7 @@ For future card generation, store in `bird-records/ip-assets/cards/draft/鸟名.
 > 
 > 它们喜欢在水边活动，尾巴经常翘起来，很有个性。你家附近有水源吗？
 > 
-> 📸 已保存到档案！这是你和奇奇今天拍的第 3 只鸟~ 累计已记录 12 个物种！
+> 📸 已保存到档案！今天已记录 3 只鸟~ 累计解锁 12 个物种！
 
 ---
 

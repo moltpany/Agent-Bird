@@ -1,0 +1,59 @@
+# TOOLS.md Template
+
+## Bird Identification Resources
+
+### API / Databases
+- **iNaturalist API** — `https://api.inaturalist.org/v1/taxa?q=...`
+  - Usage: `curl "https://api.inaturalist.org/v1/taxa?q=白头鹎&rank=species&per_page=5"`
+  - Returns: scientific name, Chinese name, images, distribution
+- **中国观鸟记录中心** — http://www.birdreport.cn
+- **Xeno-canto** — Bird sound database https://www.xeno-canto.org
+- **eBird** — https://ebird.org (observation records)
+
+### Field Guides
+- 《中国鸟类野外手册》— 马敬能
+- 《中国鸟类图鉴》— 赵欣如等
+- Merlin Bird ID app (Cornell Lab)
+
+### Conservation Status
+- **IUCN Red List** — https://www.iucnredlist.org
+- **国家重点保护野生动物名录**
+
+## Local Archive System
+
+```
+bird-records/
+├── raw-photos/          ← Raw photos (temporary)
+├── sightings-log/       ← Daily observation journals
+├── by-species/          ← Organized by species
+│   └── <species-name>/
+│       ├── photos/
+│       └── profile.md
+├── stats.json           ← Running statistics
+└── ip-assets/
+    └── cards/           ← Card design drafts
+```
+
+### Naming Conventions
+- Photo: `YYYY-MM-DD_HH-MM-SS_中文鸟名.jpg`
+- Log: `YYYY-MM-DD.md`
+- Profile: `bird-records/by-species/<鸟名>/profile.md`
+
+## Equipment Notes
+
+_(Add your camera model and workflow here)_
+- Camera: _(e.g., Panasonic ZS99)_
+- Workflow: Photo → import to phone → send to agent
+
+## Statistics to Track
+
+- Total species observed (total lifers)
+- Today's count
+- This month's count
+- Rarest sighting
+- Most photographed species
+- First sightings by date
+
+---
+
+_Limited equipment, unlimited passion 🐦📸_

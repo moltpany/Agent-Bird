@@ -1,0 +1,15 @@
+.openclaw/
+memory/
+bird-records/raw-photos/
+bird-records/sightings-log/
+bird-records/by-species/
+bird-records/stats.json
+bird-records/ip-assets/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+.env
+config.json
+secrets/
